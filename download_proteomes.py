@@ -29,7 +29,7 @@ ftp.cwd("pub/databases/uniprot/current_release/knowledgebase/reference_proteomes
 def grabFile():
 	filename=*[0-9].*fasta.gz
 	localfile=open(filename, 'wb')
-	ftp.retrbinary("RETR" + filename, localfile, localfile.write, 1000)
+	ftp.retrbinary("RETR" + filename, localfile, localfile.write)
 	ftp.quit()
 	localfile.close()
 def placeFile():
@@ -40,11 +40,4 @@ def placeFile():
 data = []
 ftp.dir(data.append)
 ftp.quit()
-
-
-# download the file
-local_filename = os.path.join(r"c:\myfolder", filename)
-lf = open(local_filename, "wb")
-ftp.retrbinary("RETR " + filename, lf.write, 8*1024)
-lf.close()
 """
