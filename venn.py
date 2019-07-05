@@ -1,3 +1,11 @@
+"""
+import pandas as pd
+df1=read_csv("scan_out.csv")
+df2=read_csv("search_out.csv")
+intersected_df=pd.merge(df1,df2,how="inner")
+"""
+
+
 # libraries
 from matplotlib import pyplot as plt
 import numpy as np
@@ -13,7 +21,7 @@ v.get_label_by_id('100').set_text('scan_outs')
 v.get_label_by_id('hmmscan').set_text('Scan_outs')
 
 v.get_patch_by_id('100').set_alpha(1.0)
-v.get_patch_by_id('100').set_color('red')
+v.get_patch_by_id('100').set_color('blue')
 v.get_label_by_id('100').set_text('57')
 v.get_label_by_id('hmmsearch').set_text('Search_outs')
 
