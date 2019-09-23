@@ -21,3 +21,6 @@ for i in ids:
     with open(i + ".fasta", "w") as out:
         for n in range(len(ids[i])):
             out.write("\n" + ">" + ids[i][n] + "\n" + seqs[ids[i][n]])
+
+# to remove first line of new fasta files;
+# sed -i '1d' *.fasta
