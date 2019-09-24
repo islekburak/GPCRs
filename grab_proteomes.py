@@ -12,32 +12,3 @@ for filename in filenames:
     ftp.retrbinary('RETR '+ filename, file.write)
     file.close()
 ftp.quit()
-
-#names=re.compile("\d.fasta.gz$")
-#filelist = pattern.findall("LIST")
-"""
-import os
-from ftplib import FTP
-import re
-
-ftp = FTP("ftp.uniprot.org", "ANONYMOUS", "PASSWORD")
-#ftp.login()
-#ftp.retrlines("LIST")
- 
-ftp.cwd("pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/")
-
-def grabFile():
-	filename=*[0-9].*fasta.gz
-	localfile=open(filename, 'wb')
-	ftp.retrbinary("RETR" + filename, localfile, localfile.write)
-	ftp.quit()
-	localfile.close()
-def placeFile():
-	filename=*[0-9].*fasta.gz
-	ftp.storbinary("STOR "+filename, open(filename, 'rb'))
-	ftp.quit()
-
-data = []
-ftp.dir(data.append)
-ftp.quit()
-"""
