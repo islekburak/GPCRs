@@ -10,6 +10,8 @@ with open("ids.txt", "r") as f:
 # open linearized fasta file, put sequences into dictionary with col1 ids as keys
 # to linearize fasta file before run this command;
 # awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < file.fasta > linearized_file.fasta
+# to format bact to fasta;
+# tr "\t" "\n" < linearized.tsv | fold -w 60
 with open("outscan_complete_seq_linearized.fasta", "r") as fasta:
     seqs = {}
     for line in fasta:
