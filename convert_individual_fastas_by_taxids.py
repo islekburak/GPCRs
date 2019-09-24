@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 from collections import defaultdict
 
 #open ids.txt, using col2 as taxids and col1 appending to defaultdict values
