@@ -2,6 +2,7 @@
 """
 to change fasta headers:
 author@islekbro
+
 """
 
 infile="3_6.fasta"
