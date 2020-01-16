@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-2D-array maker & visualizer from the data of blast outfmt7 outputs hit ranks
+2D-array maker & visualizer of blast outfmt7 outputs with hit ranks & identity
 author@islekburak
 """
 
