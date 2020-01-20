@@ -15,7 +15,9 @@ with open (infile, "r") as myfasta:
             protein=line.split("|")[1]
             gene=line.split("|")[2].split(" ")[0].split("_")[0]
             organism=line.split("|")[2].split(" ")[0].split("_")[1]
-            taxid=line.split(" ")[-4].split("=")[1]
+            taxstart=line.find("OX=")
+            taxend=line.find(" ",taxstart)
+            taxid=line[taxstart+3:taxend]
             finalheader=protein+"|"+gene+"|"+organism+"|"+taxid
             outfile.write ( ">"+finalheader + "\n")
         else:
