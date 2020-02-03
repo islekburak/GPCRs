@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 taxid picker (from MSA inputs or outputs) & appender to trimal outs' headers for pre raxml analysis stage
-
 author@islekburak
 """
 
@@ -27,7 +26,7 @@ with open(path,"r") as firstfasta:
 			taxend=line.find(" ",taxstart)
 			taxid=line[taxstart+3:taxend]
 			taxidlist.append(taxid)
-
+print(taxidlist)
 #call window to select file (trimal output)
 root=tk.Tk()
 root.withdraw()
@@ -41,15 +40,17 @@ outfile=directory+"/"+"".join(filename)+"_preML3.fasta"
 outfile = open (outfile, "w")
 
 with open (path2, "r") as secondfasta:
+	idx=0
 	for line in secondfasta:
-		if line.startswith (">"):
-			line = line[1:] # skip the ">" character
-			header=line.split(" ")[0]
-			headerroot=header.split("_")[0]
-			organism=header.split("_")[1]
-			for item in taxidlist:
-				finalheader=">"+headerroot+"|"+organism+"|"+item
-			outfile.write (finalheader + "\n")
-		else:
-			outfile.write(line)
+			if line.startswith (">"):
+				line = line[1:] # skip the ">" character
+				header=line.split(" ")[0]
+				headerroot=header.split("_")[0]
+				organism=header.split("_")[1]
+				firstheader=">"+headerroot+"|"+organism+"|"
+				secondheader=firstheader+taxidlist[idx]
+				outfile.write(secondheader+"\n")
+				idx+=1
+			else:
+				outfile.write(line)
 outfile.close()
