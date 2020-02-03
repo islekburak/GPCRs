@@ -26,7 +26,7 @@ with open(path,"r") as firstfasta:
 			taxend=line.find(" ",taxstart)
 			taxid=line[taxstart+3:taxend]
 			taxidlist.append(taxid)
-print(taxidlist)
+#print(taxidlist)
 #call window to select file (trimal output)
 root=tk.Tk()
 root.withdraw()
