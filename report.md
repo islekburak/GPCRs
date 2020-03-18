@@ -3,7 +3,7 @@
 
 Abstract
 ========
-GPCRs[1] are reported as highly related with few physiological pathway
+GPCRs[^1] are reported as highly related with few physiological pathway
 components -such as hormones and neurotransmitters-, regulation of
 social graces, regulation of the inflammatory responses and responsible
 for vision, olfaction and taste mechanisms \[1, 2\]. GPCRs' helices have
@@ -19,7 +19,7 @@ our purpose is to understand the evolutionary history, functions,
 interactions, and significance of GPCRs using different genomic tools
 *in silico*.
 
-[1]:abcd
+[^1]:https://www.ncbi.nlm.nih.gov/pubmed/28705763
 
 Accordingly, we have focused on the F class of these GPCRs. Hence we performed BLAST using human sequences for Frizzled/SMO family (11 were obtained from Uniprot-KB database) via high-performance computing. The results of BLAST are evaluated and the protein sequences are clustered by sequence similarities to create a phylogenetic tree. After getting orhtolog information for human Frizzled receptors, we intended to create a
 domain pattern for differential diagnosis of Frizzled GPCRs. Thus it
