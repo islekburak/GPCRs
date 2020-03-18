@@ -18,7 +18,6 @@ active to inactive forms in a complex with a G-proteins. In this study,
 our purpose is to understand the evolutionary history, functions,
 interactions, and significance of GPCRs using different genomic tools
 *in silico*.
-[@WU20172726]
 Accordingly, we have focused on the F class of these GPCRs. Hence we performed BLAST using human sequences for Frizzled/SMO family (11 were obtained from Uniprot-KB database) via high-performance computing. The results of BLAST are evaluated and the protein sequences are clustered by sequence similarities to create a phylogenetic tree. After getting orhtolog information for human Frizzled receptors, we intended to create a
 domain pattern for differential diagnosis of Frizzled GPCRs. Thus it
 helps to determine functional equivalence to the sets of orthologs of
